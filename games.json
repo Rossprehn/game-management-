@@ -1,0 +1,125 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "name": "Setlers of Catan",
+      "img": "./assets/catan.jpg",
+      "number": "3-4",
+      "time": "60 minutes",
+      "category": "negotiation",
+      "complexity": "2/5"
+    },
+    {
+      "name": "Ticket to Ride",
+      "img": "./assets/tickettornamee.jpg",
+      "number": "2-5",
+      "time": "30-60 minutes",
+      "category": "strategy",
+      "complexity": "2/5"
+    },
+    {
+      "name": "Coup",
+      "img": "./assets/coup.jpg",
+      "number": "3-6",
+      "time": "10 minutes",
+      "category": "bluffing",
+      "complexity": "3/5"
+    },
+    {
+      "name": "Small World",
+      "img": "./assets/smallworld.jpg",
+      "number": "2-5",
+      "time": "60 minutes",
+      "category": "strategy",
+      "complexity": "4/5"
+    },
+    {
+      "name": "Ethnos",
+      "img": "./assets/ethnos.jpg",
+      "number": "2-6",
+      "time": "40-90 minutes",
+      "category": "strategy",
+      "complexity": "3/5"
+    },
+    {
+      "name": "Sushi Go party",
+      "img": "./assets/sushi.jpg",
+      "number": "2-8",
+      "time": "20 minutes",
+      "category": "party",
+      "complexity": "1/5"
+    },
+    {
+      "name": "Dead Last",
+      "img": "./assets/deadlast.jpg",
+      "number": "6-12",
+      "time": "10 minutes",
+      "category": "bluffing",
+      "complexity": "2/5"
+    },
+    {
+      "name": "Inis",
+      "img": "./assets/inis.jpg",
+      "number": "2-4",
+      "time": "60-90 minutes",
+      "category": "strategy",
+      "complexity": "3/5"
+    },
+    {
+      "name": "Welcome to the Dungeon",
+      "img": "./assets/dungeon.jpg",
+      "number": "2-4",
+      "time": "30 minutes",
+      "category": "party",
+      "complexity": "2/5"
+    },
+    {
+      "name": "Codenames",
+      "img": "./assets/codenames.jpg",
+      "number": "2-8",
+      "time": "15 minutes",
+      "category": "party",
+      "complexity": "2/5"
+    },
+    {
+      "name": "Mysterium",
+      "img": "./assets/mystery.jpg",
+      "number": "2-7",
+      "time": "60 minutes",
+      "category": "mystery",
+      "complexity": "4/5"
+    },
+    {
+      "name": "Cry Havoc",
+      "img": "./assets/cryhavoc.jpg",
+      "number": "2-4",
+      "time": "60-120 minutes",
+      "category": "strategy",
+      "complexity": "4/5"
+    },
+    {
+      "name": "Scythe",
+      "img": "./assets/scythe.jpg",
+      "number": "1-5",
+      "time": "90-120 minutes",
+      "category": "strategy",
+      "complexity": "5/5"
+    },
+    {
+      "name": "Blood Rage",
+      "img": "./assets/bloodrage.jpg",
+      "number": "2-4",
+      "time": "60-90 minutes",
+      "category": "strategy",
+      "complexity": "3/5"
+    },
+    {
+      "name": "Star Wars: Rebellion",
+      "img": "./assets/starwars.jpg",
+      "number": "2-4",
+      "time": "60-90 minutes",
+      "category": "strategy",
+      "complexity": "3/5"
+    }
+  ]
+}

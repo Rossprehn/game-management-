@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>game night</title>
+  </head>
+  <body>
+    <header>
+      <h1>Game night</h1>
+    </header>
+    <main>
+      <form action="#" id="form">
+        <div>
+         <label for="player">player:</label>
+            <select class="player" name="player">
+              <option value="select">select</option>
+            </select>
+        </div>
+        <div>
+          <label for="game">Game:</label>
+          <input type="text" id ="game" name="game">
+        </div>
+        <div>
+          <label for="number">Number of players:</label>
+          <input type="text" id ="number" name="number">
+        </div>
+        <div>
+          <label for="time">Length:</label>
+          <input type="text" id ="time" name="time">
+        </div>
+        <div>
+          <label for="complexity">Complexity:</label>
+          <input type="text" id ="complexity" name="complexity">
+        </div>
+        <div>
+          <label for="category">Category:</label>
+          <input type="text" id ="category" name="category">
+        </div>
+        <div>
+          <input type="submit" id="button" value="Submit"/>
+        </div>
+      </form>
+      <div id="gameBox">
+        <ul id="games">
+        </ul>
+      </div>
+    </main>
+    <script src="players.js">
+
+    </script>
+  </body>
+
+</html>

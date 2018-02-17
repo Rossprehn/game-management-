@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Annie",
+    "games": ["Setlers of Catan", "Ticket to Ride", "Coup", "Cards Against Humanity"]
+  },
+  {
+    "name": "Chris",
+    "games": ["Small World", "Ethnos", "Sushi Go party", "Dead Last"]
+  },
+  {
+    "name": "Daniel",
+    "games": ["Inis", "Welcome to the Dungeon", "Codenames", "Mysterium"]
+  },
+  {
+    "name": "Marshall",
+    "games": ["Cry Havoc", "Scythe", "Blood Rage", "Star Wars: Rebellion"]
+  }
+]
