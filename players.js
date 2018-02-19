@@ -34,6 +34,7 @@ function populateForm(response) {
 }
 
 select.addEventListener('change', () => {
+  // document.querySelectorAll('$box').remove()
   document.getElementById('box').remove()
   document.getElementById('box').remove()
   document.getElementById('box').remove()
@@ -85,7 +86,7 @@ function pickGame(name) {
 
 document.getElementById('button').addEventListener('click', event => {
   event.preventDefault()
-  var form = document.querySelector('Form')
+  var form = document.querySelector('form')
   var player = document.querySelector('.player').selectedIndex
   var game = document.getElementById('game').value
   var number = document.getElementById('number').value
@@ -105,20 +106,21 @@ document.getElementById('button').addEventListener('click', event => {
 
 document.getElementById('button').addEventListener('click', event => {
   event.preventDefault()
-  var form = document.querySelector('Form')
+  var form = document.querySelector('form')
   var player = document.querySelector('.player').selectedIndex
   let playerObject = {
     player: player,
-    game: game
+    game: [game]
   }
   postPlayerForm(playerObject)
+  console.log(playerObject)
 })
 
 function postGameForm(object) {
   fetch('games.json', {
     method: 'POST',
     headers: new Headers({ 'Content-Type': 'application/json' }),
-    body: JSON.stringify(object)
+    body: JSON.stringify(gameObject)
   })
     .then(resp => resp.json())
     .then(resp => displayMessage(resp.message))
@@ -128,7 +130,7 @@ function postPlayerForm(object) {
   fetch('players.json', {
     method: 'POST',
     headers: new Headers({ 'Content-Type': 'application/json' }),
-    body: JSON.stringify(object)
+    body: JSON.stringify(playerObject)
   })
     .then(resp => resp.json())
     .then(resp => displayMessage(resp.message))

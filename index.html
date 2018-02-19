@@ -3,19 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>game night</title>
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <header>
-      <h1>Game night</h1>
+      <h1>Game Night</h1>
     </header>
     <main>
+
       <form action="#" id="form">
         <div>
-         <label for="player">player:</label>
+         <label for="player" class="picker">Pick a player:</label>
             <select class="player" name="player">
               <option value="select">select</option>
             </select>
         </div>
+        <p class="info" >Add a new game to this player's arsenal:</p>
         <div>
           <label for="game">Game:</label>
           <input type="text" id ="game" name="game">
@@ -36,15 +41,18 @@
           <label for="category">Category:</label>
           <input type="text" id ="category" name="category">
         </div>
-        <div>
+        <div id="bb">
           <input type="submit" id="button" value="Submit"/>
         </div>
       </form>
-      <div id="gameBox">
-        <ul id="games">
-        </ul>
-      </div>
-    </main>
+      <aside class="">
+        <div id="gameBox">
+          <h2>Games</h2>
+          <ul id="games">
+          </ul>
+        </div>
+      </aside>
+        </main>
     <script src="players.js">
 
     </script>
