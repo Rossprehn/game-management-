@@ -32,14 +32,21 @@ function populateForm(response) {
     select.appendChild(label)
   })
 }
+// //
+// select.addEventListener('change', () => {
+//   document.getElementById('games').remove()
+//   // document.getElementById('box').remove()
+//   // document.getElementById('box').remove()
+//   // document.getElementById('box').remove()
+//   // document.getElementById('box').remove()
+// })
 
-select.addEventListener('change', () => {
-  // document.querySelectorAll('$box').remove()
-  document.getElementById('box').remove()
-  document.getElementById('box').remove()
-  document.getElementById('box').remove()
-  document.getElementById('box').remove()
-})
+// select.addEventListener('change', () => {
+//   var newList = document.querySelector('#gamebox')
+//   var $ul = document.createElement('ul')
+//   $ul.id = 'games'
+//   newList.appendChild($div)
+// })
 
 select.addEventListener('change', () => {
   pickGame(select.value)
@@ -76,6 +83,11 @@ function pickGame(name) {
             var $p = document.createElement('p')
             $p.textContent = 'Category: ' + responseGame.category
             $li.appendChild($p)
+
+            var $h4 = document.createElement('h4')
+            $h4.textContent = 'Game owner: ' + filteredPlayer.name
+            $li.appendChild($h4)
+
             return responseGame
           }
         })
@@ -88,50 +100,70 @@ document.getElementById('button').addEventListener('click', event => {
   event.preventDefault()
   var form = document.querySelector('form')
   var player = document.querySelector('.player').selectedIndex
-  var game = document.getElementById('game').value
+  var name = document.getElementById('game').value
   var number = document.getElementById('number').value
   var time = document.getElementById('time').value
   var complexity = document.getElementById('complexity').value
   var category = document.getElementById('category').value
   let gameObject = {
-    game: game,
+    name: name,
     number: number,
     time: time,
     complexity: complexity,
     category: category
   }
   postGameForm(gameObject)
-  document.getElementById('form').reset()
+  return gameObject
+
+  // document.getElementById('form').reset()
 })
 
-document.getElementById('button').addEventListener('click', event => {
-  event.preventDefault()
-  var form = document.querySelector('form')
-  var player = document.querySelector('.player').selectedIndex
-  let playerObject = {
-    player: player,
-    game: [game]
-  }
-  postPlayerForm(playerObject)
-  console.log(playerObject)
-})
+// document.getElementById('button').addEventListener('click', event => {
+//   event.preventDefault()
+//   var form = document.querySelector('form')
+//   var player = document.querySelector('.player').selectedIndex
+//   let playerObject = {
+//     player: player,
+//     game: [game]
+//   }
+//   postPlayerForm(playerObject)
+//   console.log(playerObject)
+// })
 
-function postGameForm(object) {
-  fetch('games.json', {
-    method: 'POST',
-    headers: new Headers({ 'Content-Type': 'application/json' }),
-    body: JSON.stringify(gameObject)
+function postGameForm(gameObject) {
+  var fs = require('games.json')
+
+  fs.readFile('./games.json', 'utf-8', function(err, data) {
+    if (err) throw err
+
+    var gameObject = JSON.parse(data)
+
+    console.log(gameObject)
+
+    fs.writeFile('./games.json', JSON.stringify(gameObject), 'utf-8', function(err) {
+      if (err) throw err
+      console.log('Done!')
+    })
   })
-    .then(resp => resp.json())
-    .then(resp => displayMessage(resp.message))
 }
 
-function postPlayerForm(object) {
-  fetch('players.json', {
-    method: 'POST',
-    headers: new Headers({ 'Content-Type': 'application/json' }),
-    body: JSON.stringify(playerObject)
-  })
-    .then(resp => resp.json())
-    .then(resp => displayMessage(resp.message))
-}
+// function postGameForm(gameObject) {
+//   fetch('./games.json', {
+//     method: 'POST',
+//     headers: new Headers({ 'Content-Type': 'application/json' }),
+//     body: JSON.stringify(gameObject)
+//   })
+//     .then(resp => resp.json())
+//     .then(resp => displayMessage(resp.message))
+//   console.log(gameObject)
+// }
+//
+// function postPlayerForm(object) {
+//   fetch('players.json', {
+//     method: 'POST',
+//     headers: new Headers({ 'Content-Type': 'application/json' }),
+//     body: JSON.stringify(playerObject)
+//   })
+//     .then(resp => resp.json())
+//     .then(resp => displayMessage(resp.message))
+// }
